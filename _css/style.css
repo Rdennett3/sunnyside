@@ -1,93 +1,142 @@
-@font-face {
-  font-family: 'Thirsty';
-  src: url("../thirsty-font/_thirstyrough-webfont.woff2") format("woff2"); }
-
 body {
   margin: 0;
   padding: 0;
-  font-size: 14px;
+  font-size: 18px;
   font-family: 'Raleway', sans-serif;
   width: 100%;
   height: auto; }
 
-.spacer {
-  width: 100%;
-  height: 75vh; }
+h1 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  font-size: 60px; }
 
-.aboutDesktopOuter {
+h2 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  font-size: 40px; }
+
+h3 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  font-size: 30px; }
+
+p {
+  margin: 0;
+  padding: 0;
+  font-family: 'Barlow', sans-serif;
+  color: #23303e; }
+
+.hero {
   width: 100%;
   height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; }
-
-.leadership {
-  width: 90%;
-  height: auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
-  place-content: center;
-  gap: 20px;
-  grid-template-areas: ". . ."; }
+  position: relative; }
   @media screen and (max-width: 900px) {
-    .leadership {
-      display: none; } }
+    .hero {
+      min-height: 60vh;
+      text-align: center; } }
+  .hero img {
+    width: 100%;
+    height: auto; }
 
-.leadershipItem {
-  width: 100%;
-  height: auto;
+.herocontent {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; }
-  .leadershipItem a {
-    width: 100%;
+  justify-content: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+  .herocontent h1 {
+    color: white; }
+  .herocontent img {
+    width: 8%;
     height: auto;
-    text-decoration: none;
-    color: #000; }
-  .leadershipItem img {
-    width: 100%;
-    height: auto; }
-  .leadershipItem p {
-    text-align: center; }
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px); }
 
-.employees {
-  width: 90%;
-  height: auto;
+.topGrid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
-  grid-template-areas: ". . . . .";
-  gap: 20px; }
+  grid-template-areas: "tgi1 tgi2" "tgi3 tgi4" "tgi5 tgi6"; }
   @media screen and (max-width: 900px) {
-    .employees {
-      display: none; } }
+    .topGrid {
+      grid-template-columns: 1fr;
+      grid-template-areas: "tgi2" "tgi1" "tgi3" "tgi4" "tgi5" "tgi6"; } }
 
-.employeeItem {
+.topGridItem {
   width: 100%;
   height: auto;
+  min-height: 200px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center; }
-  .employeeItem img {
+  @media screen and (max-width: 900px) {
+    .topGridItem {
+      min-height: 60vh;
+      text-align: center; } }
+  .topGridItem:nth-of-type(1) {
+    grid-area: tgi1; }
+  .topGridItem:nth-of-type(2) {
+    grid-area: tgi2; }
+  .topGridItem:nth-of-type(3) {
+    grid-area: tgi3; }
+  .topGridItem:nth-of-type(4) {
+    grid-area: tgi4; }
+  .topGridItem:nth-of-type(5) {
+    grid-area: tgi5; }
+  .topGridItem:nth-of-type(6) {
+    grid-area: tgi6; }
+  .topGridItem img {
     width: 100%;
     height: auto; }
-  .employeeItem p {
-    text-align: center; }
 
-.aboutMobileOuter {
-  display: none; }
-  @media screen and (max-width: 899px) {
-    .aboutMobileOuter {
-      display: grid;
+.topGridInner {
+  display: flex;
+  flex-direction: column;
+  width: 70%; }
+  .topGridInner h2 {
+    color: #23303e;
+    margin-bottom: 15px; }
+  .topGridInner p {
+    margin-bottom: 15px; }
+  .topGridInner h3 {
+    color: #23303e;
+    z-index: 1; }
+
+.testimonials {
+  width: 100%;
+  height: auto;
+  min-height: 500px;
+  background: white; }
+
+.imagegrid {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: ". . . ."; }
+  @media screen and (max-width: 900px) {
+    .imagegrid {
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: auto;
       grid-template-areas: ". ."; } }
+  .imagegrid img {
+    width: 100%; }
 
-.aboutmobileitem {
-  text-align: center; }
+.footer {
+  width: 100%;
+  height: auto;
+  min-height: 50vh;
+  background: #458c7e; }
 
 /*# sourceMappingURL=style.css.map */

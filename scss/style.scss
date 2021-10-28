@@ -24,3 +24,180 @@ body{
   width:100%;
   height:auto;
 }
+
+h1{
+  @include margin;
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  font-size: 60px;
+}
+
+h2{
+  @include margin;
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  font-size: 40px;
+}
+
+h3{
+  @include margin;
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  font-size: 30px;
+}
+
+p{
+  @include margin;
+  font-family:'Barlow', sans-serif;
+  color:$neutraldarkblue;
+}
+
+.hero{
+  width:100%;
+  height:auto;
+  position:relative;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+
+  @media screen and (max-width:900px){
+    min-height: 60vh;
+    text-align: center;
+  }
+
+  img{
+    width:100%;
+    height:auto;
+  }
+}
+
+.herocontent{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  position:absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  h1{
+    color:$white;
+  }
+  img{
+    width:8%;
+    height:auto;
+    transform:translateY(50px);
+  }
+}
+
+.topGrid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows:auto;
+  grid-template-areas: 
+  "tgi1 tgi2"
+  "tgi3 tgi4"
+  "tgi5 tgi6";
+
+  @media screen and (max-width:900px){
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "tgi2"
+    "tgi1"
+    "tgi3"
+    "tgi4"
+    "tgi5"
+    "tgi6";
+  }
+
+}
+
+.topGridItem{
+  width:100%;
+  height:auto;
+  min-height: 200px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width:900px){
+    min-height: 60vh;
+    text-align: center;
+  }
+
+  &:nth-of-type(1){
+    grid-area: tgi1;
+  }
+  &:nth-of-type(2){
+    grid-area: tgi2;
+  }
+  &:nth-of-type(3){
+    grid-area: tgi3;
+  }
+  &:nth-of-type(4){
+    grid-area: tgi4;
+  }
+  &:nth-of-type(5){
+    grid-area: tgi5;
+  }
+  &:nth-of-type(6){
+    grid-area: tgi6;
+  }
+
+  img{
+    width:100%;
+    height:auto;
+  }
+}
+
+.topGridInner{
+  display:flex;
+  flex-direction: column;
+  width:70%;
+
+  h2{
+    color:$neutraldarkblue;
+    margin-bottom:15px;
+  }
+  p{
+    margin-bottom:15px;
+  }
+  h3{
+    color:$neutraldarkblue;
+    z-index:1;
+  }
+}
+
+.testimonials{
+  width:100%;
+  height:auto;
+  min-height:500px;
+  background:$white;
+}
+
+.imagegrid{
+  width:100%;
+  height:auto;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: ". . . .";
+
+  @media screen and (max-width:900px){
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: ". .";
+  }
+
+  img{
+    width:100%;
+
+  }
+}
+
+.footer{
+  width:100%;
+  height:auto;
+  min-height: 50vh;
+  background:$footer;
+}
