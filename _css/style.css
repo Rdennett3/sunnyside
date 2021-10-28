@@ -1,0 +1,93 @@
+@font-face {
+  font-family: 'Thirsty';
+  src: url("../thirsty-font/_thirstyrough-webfont.woff2") format("woff2"); }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  width: 100%;
+  height: auto; }
+
+.spacer {
+  width: 100%;
+  height: 75vh; }
+
+.aboutDesktopOuter {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.leadership {
+  width: 90%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  place-content: center;
+  gap: 20px;
+  grid-template-areas: ". . ."; }
+  @media screen and (max-width: 900px) {
+    .leadership {
+      display: none; } }
+
+.leadershipItem {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .leadershipItem a {
+    width: 100%;
+    height: auto;
+    text-decoration: none;
+    color: #000; }
+  .leadershipItem img {
+    width: 100%;
+    height: auto; }
+  .leadershipItem p {
+    text-align: center; }
+
+.employees {
+  width: 90%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: ". . . . .";
+  gap: 20px; }
+  @media screen and (max-width: 900px) {
+    .employees {
+      display: none; } }
+
+.employeeItem {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .employeeItem img {
+    width: 100%;
+    height: auto; }
+  .employeeItem p {
+    text-align: center; }
+
+.aboutMobileOuter {
+  display: none; }
+  @media screen and (max-width: 899px) {
+    .aboutMobileOuter {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      grid-template-areas: ". ."; } }
+
+.aboutmobileitem {
+  text-align: center; }
+
+/*# sourceMappingURL=style.css.map */

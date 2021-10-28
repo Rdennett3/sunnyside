@@ -1,0 +1,26 @@
+// Neutral
+$softred:hsl(7, 99%, 70%);
+$yellow: hsl(51, 100%, 49%);
+$darkcyan: hsl(167, 40%, 24%);
+$darkblue: hsl(198, 62%, 26%);
+$footer: hsl(168, 34%, 41%);
+
+// Neutral
+$neutraldarkblue:hsl(212, 27%, 19%);
+$neutralgreyishblue: hsl(213, 9%, 39%);
+$neutraldarkgreyishblue:hsl(232, 10%, 55%);
+$white:hsl(0, 0%, 100%);
+
+@mixin margin{
+  margin:0;
+  padding:0;
+}
+
+body{
+  @include margin;
+  font-size: 18px;
+  // overflow-x: hidden;
+  font-family: 'Raleway', sans-serif;
+  width:100%;
+  height:auto;
+}
